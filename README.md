@@ -1,6 +1,7 @@
 # Overview 
 
 The goal of this assignment is to assess your understanding of UML class and use case diagrams.
+
 # Instructions
 
 ## Class Diagram
