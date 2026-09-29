@@ -1,3 +1,32 @@
 @startuml design
 
+class Flight{
+    - airlineCode: String
+    - flightNumber: int
+}
+
+class Aircraft{
+    - prefix: String
+    - model: String
+    - capacity: int
+    - manufacturer: String
+    - registrationNumber: String
+}
+
+class Airport{
+    - airportCode: String
+    - city: String
+    - country: String
+    - state: String
+}
+
+class Connection{
+    - departureTime: Date
+    - arrivalTime: Date
+}
+
+Flight "0..*" --> "1" Aircraft : operated by
+Connection "2..*" --> "1" Flight : belongs to
+Connection "0..*" --> "1" Airport : located at
+
 @enduml
